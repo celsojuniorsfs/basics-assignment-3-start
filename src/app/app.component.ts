@@ -3,21 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: [
-    `
-      .textSuccess {
-        color: white;
-      }
-    `,
-  ],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  showDetails = false;
-  logs = [];
+  showSecret = false;
+  log = [];
 
-  toggleDetails() {
-    this.showDetails = true;
-    this.logs.push(this.logs.length + 1);
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }
 
